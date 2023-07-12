@@ -1,0 +1,108 @@
+# 1. Inception
+
+# Simple HTML code - Hello World
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <h1>Hello World</h1>
+    </div>
+</body>
+</html>
+```
+
+# Same HTML Code, where the Hello World is written using JS
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+    
+    </div>
+    <script>
+        const heading = document.createElement("h1")
+        heading.innerHTML = "Hello World by Javascript"
+        const root = document.getElementById("root")
+        root.appendChild(heading)
+    </script>
+</body>
+</html>
+```
+
+**What is CDN and how it works?**
+
+A content delivery network (CDN) is **a network of interconnected servers that speeds up webpage loading for data-heavy applications**. CDN can stand for content delivery network or content distribution network.
+
+React cdn link: 
+
+[CDN Links – React](https://legacy.reactjs.org/docs/cdn-links.html)
+
+**Step 1:** The First way to include react in our project is to include the links from cdn react
+
+```
+**<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>** 
+```
+
+# First React Code:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+    
+    </div>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script>
+        const heading = React.createElement("h1",{},"Hello world from React")
+        const root = ReactDOM.createRoot(document.getElementById("root"))
+        root.render(heading)
+    </script>
+</body>
+</html>
+```
+
+In the above code we have created the React code for a h1 tag in html, what if we have a nested tags like,
+
+<div id=”parent”>
+
+     <div id = “child”>
+
+            <h1>React heading element inside div</h1>
+
+     <div>
+
+</div>
+
+So this can be written in react like this
+
+```jsx
+const parent = React.createElement("div",{id:"parent"},
+React.createElement("div",{id:"child"},React.createElement("h1",{},"React heading element inside div")))
+const root = ReactDOM.createRoot(document.getElementById("root"))
+root.render(parent)
+```
+
+# React will replace not append
+
+If we have a h1 tag already in the html file, and here in App.js, we are writing react codes for Writing something in the h1 tag, where the line root.render will give the div tag with id root the entire thing that we are sending, **so the h1 tag that is already in the html file will be replaced with the one that we are done in react**
