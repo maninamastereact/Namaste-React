@@ -1,0 +1,20 @@
+#heading {
+  color: brown;
+}
+
+.header {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(67, 67, 67);
+  width: auto;
+}
+
+.left-icon {
+  margin: 10px 0px 10px 40px;
+}
+
+.right-icon {
+  margin: 10px 40px 10px 0px;
+}

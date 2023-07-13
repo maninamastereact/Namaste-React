@@ -1,0 +1,22 @@
+#heading {
+  color: brown;
+}
+
+.header {
+  background-color: #434343;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  padding: 5px;
+  display: flex;
+}
+
+.left-icon {
+  margin: 10px 0 10px 40px;
+}
+
+.right-icon {
+  margin: 10px 40px 10px 0;
+}
+
+/*# sourceMappingURL=index.1303bb05.css.map */
