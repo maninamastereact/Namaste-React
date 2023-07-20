@@ -1,0 +1,29 @@
+# 9. Optimize our App
+
+**CUSTOM HOOK**
+
+Single Resposibility principle
+
+window online event
+
+network → no throttling dropdown → offline
+
+what is linters?
+
+always name the custom hooks with the starting as use
+
+**CHUNKING / APP CHUNKING / CODE SPLITTING / DYNAMIC BUNDLING / LAZY LOADING / ON DEMAND LOADING**
+
+When app is called, it will not load the code of grocery
+
+only when we step into grocery screen , that will work
+
+```jsx
+const Grocery = lazy(()=>{
+  import("./components/gROCERY.JS")
+});
+```
+
+**SUSPENSE**
+
+Its a component
